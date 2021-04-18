@@ -1,2 +1,2 @@
 # random-words
-Look up random lists of words to word-association.
+Look up random lists of words for word-association.
