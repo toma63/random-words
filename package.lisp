@@ -6,4 +6,5 @@
 	   #:random-words
 	   #:random-dictionary-words
 	   #:random-2a-words
-	   #:random-countries))
+	   #:random-countries
+	   #:random-names))

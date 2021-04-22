@@ -11,6 +11,9 @@
 (defvar *dictionary-countries-path* "/usr/share/zoneinfo/iso3166.tab"
   "Path to the iso3166 countries file.")
 
+(defvar *dictionary-propernames-path* "/usr/share/dict/propernames"
+  "Path to the propernames list.")
+
 (defun read-word-file (filepath)
   "given a path to a file of words, parse it into a vector."
   (with-open-file (word-stream filepath :direction :input)
@@ -41,4 +44,8 @@
 (defmacro random-countries (n)
   "get n random words from the iso3166 countries file"
   `(random-words ,*dictionary-countries-path* ,n))
+
+(defmacro random-names (n)
+  "get n random proper names from the unix propernames file"
+  `(random-words ,*dictionary-propernames-path* ,n))
 
