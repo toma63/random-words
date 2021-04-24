@@ -5,6 +5,9 @@
 (defvar *dictionary-words-path* "/usr/share/dict/words"
   "Path to the standard unix words file.")
 
+(defvar *dictionary-insane-path* "/usr/share/dict/american-english-insane"
+  "Path to the standard unix words file.")
+
 (defvar *dictionary-2a-words-path* "/usr/share/dict/web2a"
   "Path to the web2a unix words file.")
 
@@ -36,6 +39,10 @@
 (defmacro random-dictionary-words (n)
   "get n random words from the unix words file"
   `(random-words ,*dictionary-words-path* ,n))
+
+(defmacro random-insane-words (n)
+  "get n random words from the unix insanely long words file"
+  `(random-words ,*dictionary-insane-path* ,n))
 
 (defmacro random-2a-words (n)
   "get n random lines from the unix web2a words file"
