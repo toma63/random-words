@@ -31,10 +31,11 @@
 (defun random-words (words-path n)
   "get n random words from the dictionary file at words-path"
   (loop
+    with rs = (make-random-state t)
     with dict = (read-word-file words-path)
     with num-words = (fill-pointer dict)
     repeat n
-    collect (aref dict (random num-words))))
+    collect (aref dict (random num-words rs))))
 
 (defmacro random-dictionary-words (n)
   "get n random words from the unix words file"
